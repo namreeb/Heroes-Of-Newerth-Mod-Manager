@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HON Mod Manager", "HON Mod Manager\HON Mod Manager.csproj", "{8CC79BCD-93A6-47F8-954C-8CC215F8881E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HON Mod Manager", "HON Mod Manager\HON Mod Manager.CSPROJ", "{8CC79BCD-93A6-47F8-954C-8CC215F8881E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
