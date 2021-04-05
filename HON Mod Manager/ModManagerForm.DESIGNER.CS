@@ -76,13 +76,13 @@
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(210, 22);
-            this.toolStripMenuItem5.Text = "&Install Enabled Mods";
+            this.toolStripMenuItem5.Text = "&Apply Enabled Mods";
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
             this.toolStripMenuItem6.Size = new System.Drawing.Size(210, 22);
-            this.toolStripMenuItem6.Text = "&Uninstall Mods";
+            this.toolStripMenuItem6.Text = "&Remove Applied Mods";
             // 
             // toolStripSeparator1
             // 
@@ -110,13 +110,13 @@
             // 
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
             this.toolStripMenuItem9.Size = new System.Drawing.Size(210, 22);
-            this.toolStripMenuItem9.Text = "Open &Resources Directory";
+            this.toolStripMenuItem9.Text = "&Open Resources Directory";
             // 
             // toolStripMenuItem10
             // 
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
             this.toolStripMenuItem10.Size = new System.Drawing.Size(210, 22);
-            this.toolStripMenuItem10.Text = "&Purge Installed Mods";
+            this.toolStripMenuItem10.Text = "&Purge Mods .S2Z File";
             // 
             // toolStripSeparator3
             // 
