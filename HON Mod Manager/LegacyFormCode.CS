@@ -1,3 +1,5 @@
+﻿/*
+
 namespace CS_ModMan
 {
     partial class MainForm : System.Windows.Forms.Form
@@ -7,12 +9,15 @@ namespace CS_ModMan
         [System.Diagnostics.DebuggerNonUserCode()]
         protected override void Dispose(bool disposing)
         {
-            try {
-                if (disposing && components != null) {
+            try
+            {
+                if (disposing && components != null)
+                {
                     components.Dispose();
                 }
             }
-            finally {
+            finally
+            {
                 base.Dispose(disposing);
             }
         }
@@ -504,7 +509,7 @@ namespace CS_ModMan
             this.ForumThreadToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.ForumThreadToolStripMenuItem.Name = "ForumThreadToolStripMenuItem";
             this.ForumThreadToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
-            this.ForumThreadToolStripMenuItem.Text = "&Visit Website (Forum Thread)";
+            this.ForumThreadToolStripMenuItem.Text = "&Visit Website (Github)";
             this.ForumThreadToolStripMenuItem.Click += new System.EventHandler(this.ForumThreadToolStripMenuItem_Click);
             // 
             // ToolStripMenuItem2
@@ -699,3 +704,5 @@ namespace CS_ModMan
 
     }
 }
+
+*/
