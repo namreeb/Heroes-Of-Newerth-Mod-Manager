@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
+using HON_Mod_Manager.Enums;
 
 namespace HON_Mod_Manager.Models
 {
-    class Modification
+    internal class Mod
     {
         //for use with the GUI
         //<-- only accurate during UpdateList()
@@ -11,7 +12,7 @@ namespace HON_Mod_Manager.Models
         public bool Applied;
         public Dictionary<string, string> ApplyAfter = new Dictionary<string, string>();
         public Dictionary<string, string> ApplyBefore = new Dictionary<string, string>();
-        public List<Modification> ApplyFirst = new List<Modification>();
+        public List<Mod> ApplyFirst = new List<Mod>();
         public string AppVersion;
         public string Author;
 
@@ -51,7 +52,7 @@ namespace HON_Mod_Manager.Models
         public string UpdateDownload;
 
         //Reference to a ModUpdater object if this mod is currently being updated
-        public ModUpdater Updater;
+        public ModManagerUpdater Updater;
 
         public string Version;
 
@@ -66,6 +67,6 @@ namespace HON_Mod_Manager.Models
             set => Disabled = !value;
         }
 
-        public bool IsUpdating => !(Updater == null || Updater.Status >= ModUpdaterStatus.NoUpdateInformation);
+        public bool IsUpdating => !(Updater == null || Updater.Status >= ModUpdateStatus.NoUpdateInformation);
     }
 }
