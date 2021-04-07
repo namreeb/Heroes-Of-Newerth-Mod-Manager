@@ -4,6 +4,7 @@ using System.Net;
 using System.Reflection;
 using System.Threading;
 using HON_Mod_Manager.Enums;
+using HON_Mod_Manager.Helpers;
 
 namespace HON_Mod_Manager.Models
 {
@@ -133,7 +134,7 @@ namespace HON_Mod_Manager.Models
                     return;
                 }
 
-                if (Tools.IsNewerVersion(m_newestVersion, Mod.Version))
+                if (ComparisonHelper.IsNewerVersion(m_newestVersion, Mod.Version))
                 {
                     Status = ModUpdateStatus.NoUpdatePresent;
                     return;

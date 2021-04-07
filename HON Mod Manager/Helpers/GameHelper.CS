@@ -259,7 +259,7 @@ namespace HON_Mod_Manager.Helpers
             var s = RegistryHelper.GetRegistryEntry("hondir");
             if (IsValidGameDir(s)) return s;
 
-            if (Tools.IsLinux())
+            if (PlatformHelper.IsLinux())
             {
                 //check linux default desktop shortcut
                 s = GetGameDirLinux();
@@ -285,7 +285,7 @@ namespace HON_Mod_Manager.Helpers
                 {
                 }
             }
-            else if (Tools.IsMacOS())
+            else if (PlatformHelper.IsMacOS())
             {
                 //guess some common paths
                 try
@@ -440,11 +440,11 @@ namespace HON_Mod_Manager.Helpers
 
         public static void SetModsDir()
         {
-            if (Tools.IsLinux())
+            if (PlatformHelper.IsLinux())
                 //m_modsDir = "~/.Heroes of Newerth/game"
                 ModsDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal),
                     ".Heroes of Newerth/game");
-            else if (Tools.IsMacOS())
+            else if (PlatformHelper.IsMacOS())
                 //m_modsDir = "~/Library/Application Support/Heroes of Newerth/game"
                 ModsDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal),
                     "Library/Application Support/Heroes of Newerth/game");

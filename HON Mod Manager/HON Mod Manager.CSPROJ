@@ -1,13 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.SDK">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>NET5.0-Windows</TargetFramework>
-    <RootNamespace>HON_Mod_Manager</RootNamespace>
-    <UseWindowsForms>True</UseWindowsForms>
-    <Version>0.0.4.0</Version>
-    <Authors>Xen0byte</Authors>
-    <Company>StackWorks™</Company>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>NET5.0-Windows</TargetFramework>
+		<UseWindowsForms>True</UseWindowsForms>
+		<Version>0.0.4.0</Version>
+		<Authors>Xen0byte</Authors>
+		<Company>StackWorks™</Company>
+	</PropertyGroup>
 
 </Project>
