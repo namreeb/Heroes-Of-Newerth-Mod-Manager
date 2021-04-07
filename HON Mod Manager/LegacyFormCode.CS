@@ -1,4 +1,4 @@
-﻿/*
+﻿/***
 
 namespace CS_ModMan
 {
@@ -705,4 +705,4 @@ namespace CS_ModMan
     }
 }
 
-*/
+***/

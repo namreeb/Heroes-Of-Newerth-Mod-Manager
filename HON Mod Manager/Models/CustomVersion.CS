@@ -53,7 +53,7 @@ namespace HON_Mod_Manager.Models
 
         public int?[] IntArray
         {
-            get { return new[] { m_major, m_minor, m_build, m_revis }; }
+            get { return new[] {m_major, m_minor, m_build, m_revis}; }
             set
             {
                 for (var i = 0; i < 4; i++)
@@ -109,7 +109,7 @@ namespace HON_Mod_Manager.Models
             }
             set
             {
-                var sa = value.Split(new[] { '.' }, StringSplitOptions.RemoveEmptyEntries);
+                var sa = value.Split(new[] {'.'}, StringSplitOptions.RemoveEmptyEntries);
 
                 if (sa.Length == 0)
                     throw new ArgumentException("Incorrect VersionString");
@@ -119,26 +119,26 @@ namespace HON_Mod_Manager.Models
                 m_major = sa.Length < 1 ||
                           string.Compare("*", sa[0], StringComparison.OrdinalIgnoreCase) == 0 ||
                           int.TryParse(sa[0], out tmp) == false
-                    ? (int?)null
+                    ? (int?) null
                     : tmp;
 
 
                 m_minor = sa.Length < 2 ||
                           string.Compare("*", sa[1], StringComparison.OrdinalIgnoreCase) == 0 ||
                           int.TryParse(sa[1], out tmp) == false
-                    ? (int?)null
+                    ? (int?) null
                     : tmp;
 
                 m_build = sa.Length < 3 ||
                           string.Compare("*", sa[2], StringComparison.OrdinalIgnoreCase) == 0 ||
                           int.TryParse(sa[2], out tmp) == false
-                    ? (int?)null
+                    ? (int?) null
                     : tmp;
 
                 m_revis = sa.Length < 4 ||
                           string.Compare("*", sa[3], StringComparison.OrdinalIgnoreCase) == 0 ||
                           int.TryParse(sa[3], out tmp) == false
-                    ? (int?)null
+                    ? (int?) null
                     : tmp;
             }
         }
@@ -154,13 +154,13 @@ namespace HON_Mod_Manager.Models
 
         public static implicit operator Version(CustomVersion cv)
         {
-            return new Version(cv.Major.GetValueOrDefault(0), cv.Minor.GetValueOrDefault(0),
+            return new(cv.Major.GetValueOrDefault(0), cv.Minor.GetValueOrDefault(0),
                 cv.Build.GetValueOrDefault(0), cv.Revis.GetValueOrDefault(0));
         }
 
         public static implicit operator CustomVersion(Version v)
         {
-            return new CustomVersion(v.Major, v.Minor, v.Build, v.Revision);
+            return new(v.Major, v.Minor, v.Build, v.Revision);
         }
 
         public static implicit operator string(CustomVersion cv)
@@ -170,7 +170,7 @@ namespace HON_Mod_Manager.Models
 
         public static implicit operator CustomVersion(string s)
         {
-            return new CustomVersion(s);
+            return new(s);
         }
 
         public override string ToString()
@@ -193,7 +193,7 @@ namespace HON_Mod_Manager.Models
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
             if (obj.GetType() != typeof(CustomVersion)) return false;
-            return Equals((CustomVersion)obj);
+            return Equals((CustomVersion) obj);
         }
 
         public int CompareToArray(CustomVersion other)
@@ -431,7 +431,7 @@ namespace HON_Mod_Manager.Models
 
         public CustomRequirement(string requirement)
         {
-            var sa = requirement.Split(new[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
+            var sa = requirement.Split(new[] {'-'}, StringSplitOptions.RemoveEmptyEntries);
 
             if (sa.Length == 0)
             {
@@ -469,7 +469,7 @@ namespace HON_Mod_Manager.Models
 
         public static implicit operator CustomRequirement(string s)
         {
-            return new CustomRequirement(s);
+            return new(s);
         }
 
         public static implicit operator string(CustomRequirement cr)

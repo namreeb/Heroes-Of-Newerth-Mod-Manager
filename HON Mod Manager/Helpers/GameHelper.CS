@@ -32,7 +32,7 @@ namespace HON_Mod_Manager.Helpers
 
         //e.g. "C:\Program Files\Heroes of Newerth\game" - FIXED to "~/.Heroes of Newerth/game" under linux, and to "~/Library/Application Support/Heroes of Newerth/game" under mac
 
-        public static Version Version { get; private set; } = new Version(0, 0, 0, 0);
+        public static Version Version { get; private set; } = new(0, 0, 0, 0);
 
         public static string GameFilePath { get; private set; }
 
@@ -62,14 +62,14 @@ namespace HON_Mod_Manager.Helpers
             var end = Haystack.Length - Needle.Length;
 
             for (var i = 0; i <= end; i++)
-                for (var j = 0; j < Needle.Length; j++)
-                {
-                    if (Haystack[i + j] != Needle[j])
-                        break;
+            for (var j = 0; j < Needle.Length; j++)
+            {
+                if (Haystack[i + j] != Needle[j])
+                    break;
 
-                    if (j == Needle.Length - 1)
-                        return i;
-                }
+                if (j == Needle.Length - 1)
+                    return i;
+            }
 
             return -1;
         }
@@ -398,7 +398,7 @@ namespace HON_Mod_Manager.Helpers
                 if (r == null) return "";
                 r = r.OpenSubKey("hon");
                 if (r == null) return "";
-                var s = (string)r.GetValue("InstallLocation", "");
+                var s = (string) r.GetValue("InstallLocation", "");
                 if (s == "") return "";
                 if (Directory.Exists(s))
                 {

@@ -10,9 +10,9 @@ namespace HON_Mod_Manager.Models
         //<-- only accurate during UpdateList()
         //was this mod found to be applied when reading resources999.s2z?
         public bool Applied;
-        public Dictionary<string, string> ApplyAfter = new Dictionary<string, string>();
-        public Dictionary<string, string> ApplyBefore = new Dictionary<string, string>();
-        public List<Mod> ApplyFirst = new List<Mod>();
+        public Dictionary<string, string> ApplyAfter = new();
+        public Dictionary<string, string> ApplyBefore = new();
+        public List<Mod> ApplyFirst = new();
         public string AppVersion;
         public string Author;
 
@@ -33,7 +33,7 @@ namespace HON_Mod_Manager.Models
 
         //raw incompatibility, requirement and priority data
         //Key: FixedName of the incompatible mod, Value: version matching string, space character, non-fixed mod name
-        public Dictionary<string, string> Incompatibilities = new Dictionary<string, string>();
+        public Dictionary<string, string> Incompatibilities = new();
 
         public int Index;
 
@@ -42,7 +42,7 @@ namespace HON_Mod_Manager.Models
         public bool Marked;
         public string MMVersion;
         public string Name;
-        public Dictionary<string, string> Requirements = new Dictionary<string, string>();
+        public Dictionary<string, string> Requirements = new();
 
 
         //URL for checking for updates

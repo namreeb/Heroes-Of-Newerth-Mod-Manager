@@ -18,7 +18,7 @@ namespace HON_Mod_Manager.Helpers
                 if (key == null) return "";
                 var myOutput = key.GetValue(name, "");
                 key.Close();
-                return (string)myOutput;
+                return (string) myOutput;
             }
             catch
             {

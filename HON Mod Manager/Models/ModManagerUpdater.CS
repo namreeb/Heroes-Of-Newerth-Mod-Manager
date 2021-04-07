@@ -10,6 +10,7 @@ namespace HON_Mod_Manager.Models
 {
     internal class ModManagerUpdater
     {
+        private readonly Thread m_thread;
         private bool m_abortRequested;
 
         private byte[] m_bytes;
@@ -17,8 +18,6 @@ namespace HON_Mod_Manager.Models
         private int m_progress;
 
         private int m_size;
-
-        private readonly Thread m_thread;
 
         public ModManagerUpdater(Mod mod)
         {
@@ -116,9 +115,9 @@ namespace HON_Mod_Manager.Models
             try
             {
                 Status = ModUpdateStatus.Checking;
-                var myWebRequest = (HttpWebRequest)WebRequest.Create(FixHTTPURL(Mod.UpdateCheck));
+                var myWebRequest = (HttpWebRequest) WebRequest.Create(FixHTTPURL(Mod.UpdateCheck));
                 myWebRequest.UserAgent = "HoN Mod Manager " + Assembly.GetExecutingAssembly().GetName().Version;
-                var myHttpWebResponse = (HttpWebResponse)myWebRequest.GetResponse();
+                var myHttpWebResponse = (HttpWebResponse) myWebRequest.GetResponse();
                 var myStreamReader = new StreamReader(myHttpWebResponse.GetResponseStream());
                 //only read up to 20 characters
                 var tCharBuffer = new char[20];
@@ -141,9 +140,9 @@ namespace HON_Mod_Manager.Models
                 }
 
                 Status = ModUpdateStatus.Downloading;
-                myWebRequest = (HttpWebRequest)WebRequest.Create(FixHTTPURL(Mod.UpdateDownload));
+                myWebRequest = (HttpWebRequest) WebRequest.Create(FixHTTPURL(Mod.UpdateDownload));
                 myWebRequest.UserAgent = "HoN Mod Manager " + Assembly.GetExecutingAssembly().GetName().Version;
-                myHttpWebResponse = (HttpWebResponse)myWebRequest.GetResponse();
+                myHttpWebResponse = (HttpWebResponse) myWebRequest.GetResponse();
                 //mods larger than 25 mb are ridiculous!
                 if (myHttpWebResponse.ContentLength > 25 * 1024 * 1024)
                 {
