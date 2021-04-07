@@ -2,6 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>NET5.0-Windows</TargetFramework>
+		<OutputType>WinExe</OutputType>
 		<UseWindowsForms>True</UseWindowsForms>
 		<Version>0.0.4.0</Version>
 		<Authors>Xen0byte</Authors>
